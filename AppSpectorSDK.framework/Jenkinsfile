@@ -1,0 +1,120 @@
+#!/usr/bin/env groovy
+
+def utils = fileLoader.fromGit("jenkins-ios-pipeline-utils.groovy", //file
+                               "git@repos.wvholdings.com:mobile/pipeline-helper-scripts-ios.git", //repository
+                               "a1e9d12", // revision
+                               "5ee47e5e-00fb-43a5-9ccd-f5aa5a5310ee", // credentials
+                               "master") //branch
+
+
+@NonCPS
+private def String getScmChanges(truncateLength = 140) {
+    def changeString = ""
+    def changeLogSets = currentBuild.rawBuild.changeSets
+    echo "Gathering SCM changes. size = " + changeLogSets.size()
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            truncatedMsg = entry.msg.take(truncateLength)
+            changeString += " - ${truncatedMsg} [${entry.author}]\n"
+        }
+    }
+
+    return changeString ?: " - No new changes"
+}
+
+@NonCPS
+private def void sendSuccessMessage(message) {
+    sendMessage(message, "good")
+}
+
+@NonCPS
+private def void sendFailureMessage(message) {
+    sendMessage(message, "danger")
+}
+
+@NonCPS
+private def void sendMessage(message, color) {
+    slackSend color: color,
+    channel: "#appspector-upstream",
+    message: message.toString(),
+    teamDomain: "techery",
+    token: env.SLACK_TOKEN
+}
+
+pipeline {
+    agent {
+        node {
+            label 'ios'
+        }
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                script {
+                    def message = new StringBuilder()
+                    message.append("AppSpectorSDK build started (Job <${env.BUILD_URL}|#${env.BUILD_NUMBER}>) :sheepy:")
+                    message.append('\n')
+                    sendSuccessMessage(message);
+                }
+            }
+        }
+
+        stage('Bundler') {
+            steps {
+                script {
+                    utils.bash('rvm use 2.3.1')
+                    utils.bash('bundle install')
+                }
+            }
+        }
+
+        stage('Cocoapods') {
+            steps {
+                script {
+                    utils.bash('bundle exec pod install')
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    utils.bash('xcodebuild -workspace "AppSpectorSDK.xcworkspace" -scheme "AppSpectorSDK" -configuration "Debug" build -destination "platform=iOS Simulator,name=iPhone 6" -sdk iphonesimulator | xcpretty')
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                script {
+                    utils.bash('bundle exec fastlane scan --workspace "AppSpectorSDK.xcworkspace" --scheme "AppSpectorSDK" --clean -i https://hooks.slack.com/services/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 -e appspector-upstream')
+                    step([$class: 'JUnitResultArchiver', allowEmptyResults: false, testResults: 'test_output/report.junit'])
+
+                    utils.bash('xcov -w AppSpectorSDK.xcworkspace -s AppSpectorSDK -o xcov_output -i https://hooks.slack.com/services/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 -e appspector-upstream')
+
+                }
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                def message = new StringBuilder()
+                message.append("AppSpectorSDK build succeded (Job <${env.BUILD_URL}|#${env.BUILD_NUMBER}>) :sheepy:")
+                message.append('\n')
+                sendSuccessMessage(message);
+            }
+        }
+        failure {
+            script {
+                def message = new StringBuilder()
+                message.append("AppSpectorSDK build failed (Job <${env.BUILD_URL}|#${env.BUILD_NUMBER}>) :sheepy:")
+                message.append('\n')
+                sendFailureMessage(message);
+            }
+        }
+    }
+}
