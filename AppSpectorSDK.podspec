@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.license          = { type: 'MIT', file: 'LICENSE' }
     s.author           = { "Techery" => "heroes@techery.io" }
     s.platform         = :ios
-    s.source           = { :http => 'git@github.com:techery/appspector-ios-sdk-binary/raw/master/AppSpectorSDK.zip' }
+    s.source           = { :http => 'git@github.com/techery/appspector-ios-sdk-binary/raw/master/AppSpectorSDK.zip' }
     s.ios.deployment_target = '8.0'
     s.ios.vendored_frameworks = 'AppSpectorSDK.framework'
     s.dependency 'SocketRocket'
