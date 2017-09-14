@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for AppSpectorSDK.
 FOUNDATION_EXPORT double AppSpectorSDKVersionNumber;
-
-//! Project version string for AppSpectorSDK.
 FOUNDATION_EXPORT const unsigned char AppSpectorSDKVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <AppSpectorSDK/PublicHeader.h>
-
 #import <AppSpectorSDK/AppSpector.h>
+#import <AppSpectorSDK/AppSpectorConfig.h>
