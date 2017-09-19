@@ -16,7 +16,7 @@ static NSString * const AS_SQLITE_MONITOR       = @"sqlite-monitor";
 static NSString * const AS_HTTP_MONITOR         = @"http-monitor";
 static NSString * const AS_COREDATA_MONITOR     = @"coredata-monitor";
 static NSString * const AS_PERFORMANCE_MONITOR  = @"performance-monitor";
-static NSString * const AS_LOG_MONITOR          = @"log-monitor";
+static NSString * const AS_LOG_MONITOR          = @"logger";
 
 /**
  Macro to enable all monitors at once.
