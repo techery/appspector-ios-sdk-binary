@@ -27,6 +27,17 @@ typedef NSDictionary <NSString *, NSString *> ASMetadata;
  */
 + (instancetype)configWithAPIKey:(NSString *)apiKey monitorIDs:(NSArray <NSString *> *)monitorIDs metadata:(ASMetadata *)metadata;
 
+
+/**
+ Convinience initializer.
+ Builds config with all monitors enabled.
+
+ @param apiKey NSString key used to access application instance. You can get one on settings page after creating app on the frontend.
+ @param metadata ASMetadata Dictionary with string key-value pairs. Reserved for future use.
+ @return AppSpectorConfig
+ */
++ (instancetype)configWithAPIKey:(NSString *)apiKey metadata:(ASMetadata *)metadata;
+
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
 
