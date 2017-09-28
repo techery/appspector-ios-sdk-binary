@@ -2,7 +2,7 @@
 //  AppSpector.h
 //  AppSpectorSDK
 //
-//  Created by Yevhen Sichkar on 5/18/17.
+//  Created by Techery on 5/18/17.
 //  Copyright © 2017 Techery. All rights reserved.
 //
 

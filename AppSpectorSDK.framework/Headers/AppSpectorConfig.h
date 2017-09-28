@@ -2,7 +2,7 @@
 //  AppSpectorConfig.h
 //  AppSpectorSDK
 //
-//  Created by Deszip on 12/09/2017.
+//  Created by Techery on 12/09/2017.
 //  Copyright © 2017 Techery. All rights reserved.
 //
 
