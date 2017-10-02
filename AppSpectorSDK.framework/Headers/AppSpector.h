@@ -21,19 +21,11 @@ static NSString * const AS_LOG_MONITOR          = @"logger";
 @interface AppSpector : NSObject
 
 /**
- Initializer for AppSPector shared instance
-
- @return Configured AppSpector instance ready to be started with 'runWithConfig:'
- */
-+ (AppSpector *)spector;
-
-
-/**
  Starts AppSpector using provided config.
  First loads and starts configured monitors then establishes session with backend using provided key.
 
  @param config AppSpetorConfig instance providing API key, list of monitors to load and metadata.
  */
-- (void)runWithConfig:(AppSpectorConfig *)config;
++ (void)runWithConfig:(AppSpectorConfig *)config;
 
 @end

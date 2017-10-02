@@ -10,8 +10,9 @@
 
 @interface AppSpectorConfig : NSObject
 
-@property (copy, nonatomic) NSString *apiKey;
-@property (strong, nonatomic) NSSet <NSString *> *monitorIDs;
+@property (copy, nonatomic, readonly) NSString *apiKey;
+@property (strong, nonatomic, readonly) NSSet <NSString *> *monitorIDs;
+
 
 /**
  Designated initializer for config
