@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class AppSpectorConfig;
+#import "AppSpectorConfig.h"
 
 // Monitor IDs
 static NSString * const AS_SCREENSHOT_MONITOR   = @"screenshot-monitor";

@@ -12,4 +12,3 @@ FOUNDATION_EXPORT double AppSpectorSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char AppSpectorSDKVersionString[];
 
 #import <AppSpectorSDK/AppSpector.h>
-#import <AppSpectorSDK/AppSpectorConfig.h>
