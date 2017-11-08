@@ -11,12 +11,12 @@
 #import "AppSpectorConfig.h"
 
 // Monitor IDs
-static NSString * const AS_SCREENSHOT_MONITOR   = @"screenshot";
-static NSString * const AS_SQLITE_MONITOR       = @"sqlite";
-static NSString * const AS_HTTP_MONITOR         = @"http";
-static NSString * const AS_COREDATA_MONITOR     = @"ios-core-data";
-static NSString * const AS_PERFORMANCE_MONITOR  = @"performance";
-static NSString * const AS_LOG_MONITOR          = @"logs";
+extern NSString * const AS_SCREENSHOT_MONITOR;
+extern NSString * const AS_SQLITE_MONITOR;
+extern NSString * const AS_HTTP_MONITOR;
+extern NSString * const AS_COREDATA_MONITOR;
+extern NSString * const AS_PERFORMANCE_MONITOR;
+extern NSString * const AS_LOG_MONITOR;
 
 @interface AppSpector : NSObject
 
