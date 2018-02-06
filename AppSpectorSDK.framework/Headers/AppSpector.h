@@ -18,6 +18,7 @@ extern NSString * const AS_COREDATA_MONITOR;
 extern NSString * const AS_PERFORMANCE_MONITOR;
 extern NSString * const AS_LOG_MONITOR;
 extern NSString * const AS_LOCATION_MONITOR;
+extern NSString * const AS_ENVIRONMENT_MONITOR;
 
 @interface AppSpector : NSObject
 
