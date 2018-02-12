@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name             = "AppSpectorSDK"
-    s.version          = "0.1.0"
-    s.summary          = "AppSpector iOS SDK"
+    s.version          = "0.3.1"
+    s.summary          = "Debugging doesn't have to be painful!"
     s.homepage         = "http://appspector.com"
     s.license          = { type: 'MIT', file: 'LICENSE' }
     s.author           = { "Techery" => "heroes@techery.io" }
@@ -9,7 +9,4 @@ Pod::Spec.new do |s|
     s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorSDK.zip?raw=true' }
     s.ios.deployment_target = '8.0'
     s.ios.vendored_frameworks = 'AppSpectorSDK.framework'
-    s.dependency 'SocketRocket'
-    s.dependency 'MPMessagePack'
-    s.dependency 'fishhook', '~> 0.2'
 end
