@@ -25,6 +25,7 @@ extern NSString * const AS_ENVIRONMENT_MONITOR;
 /**
  Starts AppSpector using provided config.
  First loads and starts configured monitors then establishes session with backend using provided key.
+ Does nothing if AppStore environment detected
 
  @param config AppSpetorConfig instance providing API key, list of monitors to load and metadata.
  */
