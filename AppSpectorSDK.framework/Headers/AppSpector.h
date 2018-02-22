@@ -20,6 +20,7 @@ extern NSString * const AS_LOG_MONITOR;
 extern NSString * const AS_LOCATION_MONITOR;
 extern NSString * const AS_ENVIRONMENT_MONITOR;
 extern NSString * const AS_DEFAULTS_MONITOR;
+extern NSString * const AS_NOTIFICATION_MONITOR;
 
 
 @interface AppSpector : NSObject
