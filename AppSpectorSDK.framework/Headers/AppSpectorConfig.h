@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ASHTTPMonitorFilter.h"
+
 @interface AppSpectorConfig : NSObject
 
+/**
+ Key to bind your debugging session to application on the backend.
+ Get one in app settings on https://app.appspector.com/
+ */
 @property (copy, nonatomic, readonly) NSString *apiKey;
-@property (strong, nonatomic, readonly) NSSet <NSString *> *monitorIDs;
 
 
 /**
