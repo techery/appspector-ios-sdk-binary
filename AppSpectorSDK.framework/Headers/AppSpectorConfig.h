@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ASHTTPMonitorSanitizer.h"
+
 @interface AppSpectorConfig : NSObject
 
 /**
@@ -15,6 +17,13 @@
  Get one in app settings on https://app.appspector.com/
  */
 @property (copy, nonatomic, readonly) NSString *apiKey;
+
+
+/**
+ HTTP monitor sanitizer.
+ Should be configured before call to '[AppSpector start]' method to take effect.
+ */
+@property (strong, nonatomic, readonly) ASHTTPMonitorSanitizer *httpSanitizer;
 
 
 /**

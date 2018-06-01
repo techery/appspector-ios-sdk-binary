@@ -34,4 +34,7 @@ extern NSString * const AS_NOTIFICATION_MONITOR;
  */
 + (void)runWithConfig:(AppSpectorConfig *)config;
 
++ (void)start;
++ (void)stop;
+
 @end
