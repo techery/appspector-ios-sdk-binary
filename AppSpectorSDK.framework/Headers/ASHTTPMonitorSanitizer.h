@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ASMonitorSanitizer.h"
 #import "ASHTTPEvent.h"
 
 typedef ASHTTPEvent * (^ASHTTPFilter)(ASHTTPEvent *event);
 
-@interface ASHTTPMonitorSanitizer : NSObject
+@interface ASHTTPMonitorSanitizer : NSObject <ASMonitorSanitizer>
 
 @property (copy, nonatomic) ASHTTPFilter filter;
 

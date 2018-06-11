@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ASHTTPMonitorSanitizer.h"
+#import "ASLogSanitizer.h"
 
 @interface AppSpectorConfig : NSObject
 
@@ -20,10 +21,11 @@
 
 
 /**
- HTTP monitor sanitizer.
+ Monitor sanitizers
  Should be configured before call to '[AppSpector start]' method to take effect.
  */
 @property (strong, nonatomic, readonly) ASHTTPMonitorSanitizer *httpSanitizer;
+@property (strong, nonatomic, readonly) ASLogSanitizer *logSanitizer;
 
 
 /**
