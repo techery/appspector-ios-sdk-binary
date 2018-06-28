@@ -11,4 +11,4 @@
 FOUNDATION_EXPORT double AppSpectorTVSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char AppSpectorTVSDKVersionString[];
 
-#import "AppSpector.h"
+#import <AppSpectorTVSDK/AppSpector.h>
