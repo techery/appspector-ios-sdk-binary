@@ -10,6 +10,8 @@
 
 #import "ASLogEventLevel.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ASLogMonitorEvent : NSObject
 
 @property (assign, nonatomic) ASLogEventLevel level;
@@ -18,3 +20,5 @@
 - (instancetype)initWithMessage:(NSString *)message logLevel:(ASLogEventLevel)level;
 
 @end
+
+NS_ASSUME_NONNULL_END

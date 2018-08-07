@@ -10,18 +10,7 @@
 
 #import "AppSpectorConfig.h"
 
-// Monitor IDs
-extern NSString * const AS_SCREENSHOT_MONITOR;
-extern NSString * const AS_SQLITE_MONITOR;
-extern NSString * const AS_HTTP_MONITOR;
-extern NSString * const AS_COREDATA_MONITOR;
-extern NSString * const AS_PERFORMANCE_MONITOR;
-extern NSString * const AS_LOG_MONITOR;
-extern NSString * const AS_LOCATION_MONITOR;
-extern NSString * const AS_ENVIRONMENT_MONITOR;
-extern NSString * const AS_DEFAULTS_MONITOR;
-extern NSString * const AS_NOTIFICATION_MONITOR;
-
+NS_ASSUME_NONNULL_BEGIN
 
 @interface AppSpector : NSObject
 
@@ -38,3 +27,5 @@ extern NSString * const AS_NOTIFICATION_MONITOR;
 + (void)stop;
 
 @end
+
+NS_ASSUME_NONNULL_END

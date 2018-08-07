@@ -6,8 +6,12 @@
 //  Copyright © 2018 Techery. All rights reserved.
 //
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ASMonitorSanitizer <NSObject>
 
-- (id)filterEvent:(id)event;
+- (id _Nullable)filterEvent:(id)event;
 
 @end
+
+NS_ASSUME_NONNULL_END

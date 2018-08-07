@@ -11,10 +11,14 @@
 #import "ASMonitorSanitizer.h"
 #import "ASLogMonitorEvent.h"
 
-typedef ASLogMonitorEvent * (^ASLogFilter)(ASLogMonitorEvent *event);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef ASLogMonitorEvent * _Nullable (^ASLogFilter)(ASLogMonitorEvent *event);
 
 @interface ASLogSanitizer : NSObject <ASMonitorSanitizer>
 
 @property (copy, nonatomic) ASLogFilter filter;
 
 @end
+
+NS_ASSUME_NONNULL_END

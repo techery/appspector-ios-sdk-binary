@@ -11,6 +11,23 @@
 #import "ASHTTPMonitorSanitizer.h"
 #import "ASLogSanitizer.h"
 
+NS_SWIFT_NAME(Monitor) typedef NSString *ASMonitorID NS_TYPED_EXTENSIBLE_ENUM;
+
+// Monitor IDs
+NS_SWIFT_NAME(screenshot)       extern ASMonitorID const AS_SCREENSHOT_MONITOR;
+NS_SWIFT_NAME(sqlite)           extern ASMonitorID const AS_SQLITE_MONITOR;
+NS_SWIFT_NAME(http)             extern ASMonitorID const AS_HTTP_MONITOR;
+NS_SWIFT_NAME(coredata)         extern ASMonitorID const AS_COREDATA_MONITOR;
+NS_SWIFT_NAME(performance)      extern ASMonitorID const AS_PERFORMANCE_MONITOR;
+NS_SWIFT_NAME(logs)             extern ASMonitorID const AS_LOG_MONITOR;
+NS_SWIFT_NAME(location)         extern ASMonitorID const AS_LOCATION_MONITOR;
+NS_SWIFT_NAME(environment)      extern ASMonitorID const AS_ENVIRONMENT_MONITOR;
+NS_SWIFT_NAME(defaults)         extern ASMonitorID const AS_DEFAULTS_MONITOR;
+NS_SWIFT_NAME(notifications)    extern ASMonitorID const AS_NOTIFICATION_MONITOR;
+
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface AppSpectorConfig : NSObject
 
 /**
@@ -36,7 +53,7 @@
  
  @return AppSpectorConfig
  */
-+ (instancetype)configWithAPIKey:(NSString *)apiKey monitorIDs:(NSSet <NSString *> *)monitorIDs;
++ (instancetype)configWithAPIKey:(NSString *)apiKey monitorIDs:(NSSet <ASMonitorID> *)monitorIDs;
 
 
 /**
@@ -53,3 +70,5 @@
 - (instancetype)new NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END
