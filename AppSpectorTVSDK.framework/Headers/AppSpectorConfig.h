@@ -27,6 +27,13 @@ NS_SWIFT_NAME(notifications)    extern ASMonitorID const AS_NOTIFICATION_MONITOR
 NS_SWIFT_NAME(analytics)        extern ASMonitorID const AS_ANALYTICS_MONITOR;
 
 
+// Metadata keys
+NS_SWIFT_NAME(MetadataKey) typedef NSString *ASMetadataKey NS_TYPED_EXTENSIBLE_ENUM;
+NS_SWIFT_NAME(Metadata) typedef NSDictionary <ASMetadataKey, NSString *> ASMetadata;
+
+// Value that will be used as a device name in sessions list
+NS_SWIFT_NAME(DeviceNameKey) extern ASMetadataKey const AS_DEVICE_NAME_KEY;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AppSpectorConfig : NSObject
@@ -36,6 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
  Get one in app settings on https://app.appspector.com/
  */
 @property (copy, nonatomic, readonly) NSString *apiKey;
+
+
+/**
+ Custom values that will be passed to the backed. See `ASMetadataKey`.
+ */
+@property (copy, nonatomic) ASMetadata *metadata;
 
 
 /**
