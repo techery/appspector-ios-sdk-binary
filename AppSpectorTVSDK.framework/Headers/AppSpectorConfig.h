@@ -22,7 +22,6 @@ NS_SWIFT_NAME(performance)      extern ASMonitorID const AS_PERFORMANCE_MONITOR;
 NS_SWIFT_NAME(logs)             extern ASMonitorID const AS_LOG_MONITOR;
 NS_SWIFT_NAME(location)         extern ASMonitorID const AS_LOCATION_MONITOR;
 NS_SWIFT_NAME(environment)      extern ASMonitorID const AS_ENVIRONMENT_MONITOR;
-NS_SWIFT_NAME(defaults)         extern ASMonitorID const AS_DEFAULTS_MONITOR;
 NS_SWIFT_NAME(notifications)    extern ASMonitorID const AS_NOTIFICATION_MONITOR;
 NS_SWIFT_NAME(analytics)        extern ASMonitorID const AS_ANALYTICS_MONITOR;
 
