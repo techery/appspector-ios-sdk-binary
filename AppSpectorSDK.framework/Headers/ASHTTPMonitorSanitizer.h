@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ASMonitorSanitizer.h"
 #import "ASHTTPEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef  ASHTTPEvent * _Nullable (^ASHTTPFilter)(ASHTTPEvent *event);
 
-@interface ASHTTPMonitorSanitizer : NSObject <ASMonitorSanitizer>
+@interface ASHTTPMonitorSanitizer : NSObject
 
 @property (copy, nonatomic) ASHTTPFilter filter;
 
