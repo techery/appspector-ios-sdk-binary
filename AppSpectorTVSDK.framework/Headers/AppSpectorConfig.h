@@ -51,6 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
+ Called after SDK opens connection to backend and starts sending data.
+ Session URL is passed as an argument and will remain valid after session ends.
+ */
+typedef void (^ASStartCallback)(NSURL *sessionURL);
+@property (copy, nonatomic) ASStartCallback startCallback;
+
+
+/**
  Monitor sanitizers
  Should be configured before call to '[AppSpector start]' method to take effect.
  */
