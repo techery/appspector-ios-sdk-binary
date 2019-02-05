@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
     s.ios.vendored_frameworks = 'AppSpectorSDK.framework'
     s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorSDK.zip?raw=true' }
     s.subspec 'e2e' do |so|
-        so.dependency 'themis/themis-openssl', '~> 0.10.1'
+        so.dependency 'themis/themis-openssl'
     end
 end
