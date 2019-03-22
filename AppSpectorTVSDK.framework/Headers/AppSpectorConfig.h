@@ -24,9 +24,9 @@ NS_SWIFT_NAME(location)         extern ASMonitorID const AS_LOCATION_MONITOR;
 NS_SWIFT_NAME(environment)      extern ASMonitorID const AS_ENVIRONMENT_MONITOR;
 NS_SWIFT_NAME(notifications)    extern ASMonitorID const AS_NOTIFICATION_MONITOR;
 NS_SWIFT_NAME(analytics)        extern ASMonitorID const AS_ANALYTICS_MONITOR;
+NS_SWIFT_NAME(userdefaults)     extern ASMonitorID const AS_DEFAULTS_MONITOR;
 
-
-// Metadata keys
+// Metadata keys, any non-listed below keys are ignored, max value length is 1KB
 NS_SWIFT_NAME(MetadataKey) typedef NSString *ASMetadataKey NS_TYPED_EXTENSIBLE_ENUM;
 NS_SWIFT_NAME(Metadata) typedef NSDictionary <ASMetadataKey, NSString *> ASMetadata;
 
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- Custom values that will be passed to the backed. See `ASMetadataKey`.
+ Custom values that will be passed to the backend. See `ASMetadataKey`.
  */
 @property (copy, nonatomic) ASMetadata *metadata;
 
