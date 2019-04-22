@@ -10,6 +10,8 @@
 
 #import "AppSpectorConfig.h"
 
+#import "ASExternalEvent.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AppSpector : NSObject
@@ -25,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)start;
 + (void)stop;
+
+// External API
++ (void)sendEvent:(ASExternalEvent *)event;
 
 @end
 

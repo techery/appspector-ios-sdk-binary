@@ -11,6 +11,8 @@
 #import "ASHTTPMonitorSanitizer.h"
 #import "ASLogSanitizer.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 NS_SWIFT_NAME(Monitor) typedef NSString *ASMonitorID NS_TYPED_EXTENSIBLE_ENUM;
 
 // Monitor IDs
@@ -32,8 +34,6 @@ NS_SWIFT_NAME(Metadata) typedef NSDictionary <ASMetadataKey, NSString *> ASMetad
 
 // Value that will be used as a device name in sessions list
 NS_SWIFT_NAME(DeviceNameKey) extern ASMetadataKey const AS_DEVICE_NAME_KEY;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface AppSpectorConfig : NSObject
 
