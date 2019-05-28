@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "AppSpectorConfig.h"
-
 #import "ASExternalEvent.h"
+#import "ASAppSpectorLogger.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,10 +25,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)runWithConfig:(AppSpectorConfig *)config;
 
+
+/**
+ API to manually start and stop SDK
+ */
 + (void)start;
 + (void)stop;
 
-// External API
+/**
+ Current SDK state. `YES` means SDK either working and session is online or in a process of starting it.
+ */
++ (BOOL)isRunning;
+
+/**
+ API for external evvents, used by Flutter plugin and some other integrations.
+ If you think you need this - fell free to contact AppSpector guys for help.
+
+ @param event ASExternalEvent event model to be passed to SDK monitors
+ */
 + (void)sendEvent:(ASExternalEvent *)event;
 
 @end

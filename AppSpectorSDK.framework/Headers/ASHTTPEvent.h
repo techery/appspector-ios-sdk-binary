@@ -10,10 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Event representing HTTP request tracked by HTTP monitor.
+ 'request' / 'response' properties could be modified to adjust what data will be sent to the frontend.
+ 'blocked' flag discards request tracking when set to true. Default value is false.
+ */
 @interface ASHTTPEvent : NSObject
 
 @property (assign, nonatomic) BOOL blocked;
-@property (strong, nonatomic, nullable) NSURLRequest *request;
+@property (strong, nonatomic, nullable) NSMutableURLRequest *request;
 @property (strong, nonatomic, nullable) NSURLResponse *response;
 
 + (instancetype)eventWithRequest:(NSURLRequest *)request;
