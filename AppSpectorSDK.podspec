@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
     s.author           = { 'Techery' => 'heroes@techery.io' }
     s.platform         = :ios
     s.ios.deployment_target = '9.3'
-    s.ios.vendored_frameworks = 'AppSpectorSDK.framework'
     s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorSDK.zip?raw=true' }
+    s.ios.vendored_frameworks = 'AppSpectorSDK.framework'
     s.subspec 'e2e' do |so|
         so.dependency 'themis/themis-openssl'
     end

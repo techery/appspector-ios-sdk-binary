@@ -1,6 +1,0 @@
-framework module AppSpectorTVSDK {
-  umbrella header "AppSpectorTVSDK.h"
-
-  export *
-  module * { export * }
-}
