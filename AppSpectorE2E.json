@@ -1,4 +1,5 @@
 {
+ "$(MARKETING_VERSION)": "https://github.com/appspector/appspector-ios-sdk-binary/raw/$(MARKETING_VERSION)/AppSpectorSDKE2E.framework.zip",
  "1.2.2": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.2/AppSpectorSDKE2E.framework.zip",
  "1.2.4": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.4/AppSpectorSDKE2E.framework.zip",
  "1.2.5": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.5/AppSpectorSDKE2E.framework.zip",
