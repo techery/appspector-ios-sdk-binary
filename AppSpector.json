@@ -1,5 +1,6 @@
 {
  "$(MARKETING_VERSION)": "https://github.com/appspector/appspector-ios-sdk-binary/raw/$(MARKETING_VERSION)/AppSpectorSDK.framework.zip",
+ "1.2.10": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.10/AppSpectorSDK.framework.zip",
  "1.2.2": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.2/AppSpectorSDK.framework.zip",
  "1.2.4": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.4/AppSpectorSDK.framework.zip",
  "1.2.5": "https://github.com/appspector/appspector-ios-sdk-binary/raw/1.2.5/AppSpectorSDK.framework.zip",
