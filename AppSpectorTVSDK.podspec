@@ -6,7 +6,9 @@ Pod::Spec.new do |s|
     s.license          = { type: 'MIT', file: 'LICENSE' }
     s.author           = { 'Techery' => 'heroes@techery.io' }
     s.platform         = :tvos
-    s.tvos.deployment_target = '9.0'
+    s.tvos.deployment_target = '10.0'
     s.tvos.vendored_frameworks = 'AppSpectorTVSDK.framework'
     s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorTVSDK.zip?raw=true' }
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
 end
