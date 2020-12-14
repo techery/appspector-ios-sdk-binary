@@ -18,12 +18,12 @@ let package = Package(
         .binaryTarget(
             name: "AppSpectorSDK",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.0/AppSpectorSDK.xcframework.zip",
-            checksum: "3c8c3d576c1ca38cca46a3fd7a62b3aed0654fba54d9822933af92c568bf60fd"
+            checksum: "8a0d0648402a15ed4ccbb6f1af8c5afc167ae6b686edcabbb16ea56de1cf04b6"
         ),
         .binaryTarget(
             name: "AppSpectorTVSDK",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.0/AppSpectorTVSDK.xcframework.zip",
-            checksum: "2aefae3aed67ca056b2f6e145465f91a1fea23af62d1dfa1aecd7bf92061d82c"
+            checksum: "4c48b4878e8b171d1559917dce1ba076a2c9f212bc8fa634d50335f58ac15d59"
         )
     ]
 )
