@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
     s.license          = { type: 'MIT', file: 'LICENSE' }
     s.author           = { 'Techery' => 'heroes@techery.io' }
     s.platform         = :ios
-    s.ios.deployment_target = '11.0'
-    s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorSDKE2E.xcframework.zip?raw=true' }
+    s.ios.deployment_target = '13.0'
+    s.source           = { :http => 'https://raw.githubusercontent.com/techery/appspector-ios-sdk-binary/master/AppSpectorSDKE2E.xcframework.zip' }
     s.ios.vendored_frameworks = 'AppSpectorSDKE2E.xcframework'
     s.dependency 'themis', '0.14.0'
 end

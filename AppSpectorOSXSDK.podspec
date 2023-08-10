@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
     s.author           = { 'Techery' => 'heroes@techery.io' }
     s.platform         = :osx
     s.osx.deployment_target = '11.0'
-    s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorOSXSDK.xcframework.zip?raw=true' }
+    s.source           = { :http => 'https://raw.githubusercontent.com/techery/appspector-ios-sdk-binary/master/AppSpectorOSXSDK.xcframework.zip' }
     s.osx.vendored_frameworks = 'AppSpectorOSXSDK.xcframework'    
 end

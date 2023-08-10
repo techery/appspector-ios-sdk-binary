@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
     s.platform         = :tvos
     s.tvos.deployment_target = '10.0'
     s.tvos.vendored_frameworks = 'AppSpectorTVSDK.framework'
-    s.source           = { :http => 'https://github.com/techery/appspector-ios-sdk-binary/blob/master/AppSpectorTVSDK.zip?raw=true' }
+    s.source           = { :http => 'https://raw.githubusercontent.com/techery/appspector-ios-sdk-binary/master/AppSpectorTVSDK.xcframework.zip' }
 end
