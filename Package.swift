@@ -15,22 +15,22 @@ let package = Package(
         .binaryTarget(
             name: "AppSpectorSDK",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.9/AppSpectorSDK.xcframework.zip",
-            checksum: "3f6377fba3971d0ea1dab80807240b452a5ae49ef7fa4181c1cbbbd59bae3412"
+            checksum: "3f2f2cbbec816db2927d50ed298de51672cb4d25852a1df59d2378107430e882"
         ),
         .binaryTarget(
             name: "AppSpectorSDKE2E",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.9/AppSpectorSDKE2E.xcframework.zip",
-            checksum: "cf460b236dd9a70a462f7ee054590124f1b6707c8fc44e925784d12072f5abed"
+            checksum: "f3a5c49d40196ee629ba1e6b3881e0cace03010c4d5f268532492d6d92b2b373"
         ),
         .binaryTarget(
             name: "AppSpectorTVSDK",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.9/AppSpectorTVSDK.xcframework.zip",
-            checksum: "2c8a4678c111c6538f16645a0fd3c3d74135ce1da42cd47d167a53362de37346"
+            checksum: "a4f6458283ce2f34a7bb361bfa11d9e30f37dd528ff8b426664dc18ac0b43f2d"
         ),
         .binaryTarget(
             name: "AppSpectorOSXSDK",
             url: "https://github.com/techery/appspector-ios-sdk-binary/releases/download/1.4.9/AppSpectorOSXSDK.xcframework.zip",
-            checksum: "311a7e2fc2fd77f1b9ea825ad7eab1d596d612b1230377501d297f6286cd3e3e"
+            checksum: "c3a94b53fe31ac5070b35f7e3e6727ead5ac012a80d3f4fddfbaa0506a6bf030"
         )
     ]
 )
